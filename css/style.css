@@ -116,73 +116,16 @@ section{
 }
 
 
-@media(max-width:768px){
-
-    .heading{
-        font-size: 6rem;
-    }
-
-    .heading span{
-        font-size: 2.3rem;
-    }
-
-    #menu-btn{
-        display: initial;
-    }
-
-    #menu-btn.fa-times{
-        transform:rotate(180deg);
-    }
-
-    .header .navbar{
-        position: absolute;
-        top:99%; left:0; right:0;
-        background:#fff;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    .header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
-    .header .navbar a{
-        display: block;
-        font-size: 2.2rem;
-        margin:0;
-        padding:1.5rem 2rem;
-    }
-
-    .home{
-        text-align: center;
-    }
-
-    .home .row .content h3{
-        font-size: 4rem;
-    }
-
-    .menu .box-container .box{
-        margin-left: 0;
-        margin-top: 6rem;
-        flex-flow: column;
-        text-align: center;
-    }
-
-    .menu .box-container .box img{
-        margin-left: 0;
-        margin-top: -6rem;
-    }
-
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
 }
 
-@media(max-width:450px){
-
-    html{
-        font-size: 50%;
-    }
-
-    .home .row .image img{
-        height: auto;
-        width: 100%;
-    }
-
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
